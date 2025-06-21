@@ -1,0 +1,17 @@
+{
+  "name": "WordPress Dev Env",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "wordpress",
+  "workspaceFolder": "/var/www/html/wp-content/plugins/wptask",
+  "postCreateCommand": "bash /post-create-setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "xdebug.php-debug"
+      ]
+    }
+  },
+  "forwardPorts": [80, 3306],
+  "remoteUser": "www-data"
+}
